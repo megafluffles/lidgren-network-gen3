@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>MSCommon</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NativeMethods.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Documentation.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Documentation.txt" />
+  </ItemGroup>
+
+</Project>

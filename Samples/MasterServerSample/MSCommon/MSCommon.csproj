@@ -100,9 +100,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Lidgren.Network\Lidgren.Network.csproj">
-      <Project>{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}</Project>
-      <Name>Lidgren.Network</Name>
+    <ProjectReference Include="..\..\..\Lidgren.Network.MultiTarget\Lidgren.Network.MultiTarget.csproj">
+      <Project>{f8d4dfb7-adef-4919-a91f-ab6df1d74c18}</Project>
+      <Name>Lidgren.Network.MultiTarget</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

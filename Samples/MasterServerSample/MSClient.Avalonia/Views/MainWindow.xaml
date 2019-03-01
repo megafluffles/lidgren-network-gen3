@@ -1,0 +1,27 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MSClient.Avalonia.ViewModels;assembly=MSClient.Avalonia"
+        Icon="resm:MSClient.Avalonia.Assets.avalonia-logo.ico"
+        Title="MSClient.Avalonia" Width="800" Height="600">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  
+  <!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+
+  <DockPanel>
+
+    <DockPanel DockPanel.Dock="Top" Margin="4">
+
+      <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4">Master server address</TextBlock>
+      <Button DockPanel.Dock="Right" Margin="4" Command="{Binding GetHostListCommand}">Get host list</Button>
+      <TextBox Margin="4" Name="masterServerTextBox" Text="{Binding MasterServerAddress}" />
+
+    </DockPanel>
+
+    <TextBlock Margin="4" />
+
+  </DockPanel>
+  
+</Window>

@@ -11,7 +11,7 @@ namespace MSServer
 	{
 		static void Main(string[] args)
 		{
-			IPEndPoint masterServerEndpoint = NetUtility.Resolve("localhost", CommonConstants.MasterServerPort);
+			IPEndPoint masterServerEndpoint = NetUtility.Resolve("jb-monogame-dev.australiaeast.cloudapp.azure.com", CommonConstants.MasterServerPort);
 
 			NetPeerConfiguration config = new NetPeerConfiguration("game");
 			config.SetMessageTypeEnabled(NetIncomingMessageType.NatIntroductionSuccess, true);
