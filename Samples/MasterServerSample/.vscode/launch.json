@@ -14,12 +14,23 @@
             "args":
             [
             ]
-        } ,
+        },
         {
             "name": "MasterServer",
             "type": "mono",
             "request": "launch",
             "program": "${workspaceRoot}/MasterServer/bin/Debug/MasterServer.exe",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "Build All",
+            "args":
+            [
+            ]
+        },
+        {
+            "name": "MSServer",
+            "type": "mono",
+            "request": "launch",
+            "program": "${workspaceRoot}/MSServer/bin/Debug/MSServer.exe",
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Build All",
             "args":
@@ -32,7 +43,7 @@
         {
             "name": "Debug All",
             "preLaunchTask" : "Build All",
-            "configurations": ["MasterServer","MSClient .NET Core"]
+            "configurations": ["MasterServer","MSClient .NET Core", "MSServer"]
         }
     ]
 }
