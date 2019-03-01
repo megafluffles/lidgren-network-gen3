@@ -50,5 +50,44 @@ namespace MSClient.Avalonia.ViewModels
             m_client.SendUnconnectedMessage(listRequest, m_masterServer);
         }
 
+		static void AppIdle(object sender, EventArgs e)
+		{
+            NetIncomingMessage inc;
+            while ((inc = m_client.ReadMessage()) != null)
+            {
+                switch (inc.MessageType)
+                {
+                    case NetIncomingMessageType.VerboseDebugMessage:
+                    case NetIncomingMessageType.DebugMessage:
+                    case NetIncomingMessageType.WarningMessage:
+                    case NetIncomingMessageType.ErrorMessage:
+                        throw new NotImplementedException();
+                        //NativeMethods.AppendText(m_mainForm.richTextBox1, inc.ReadString());
+                        //break;
+                    case NetIncomingMessageType.UnconnectedData:
+                        if (inc.SenderEndPoint.Equals(m_masterServer))
+                        {
+                            // it's from the master server - must be a host
+                            var id = inc.ReadInt64();
+                            var hostInternal = inc.ReadIPEndPoint();
+                            var hostExternal = inc.ReadIPEndPoint();
+
+                            m_hostList[id] = new IPEndPoint[] { hostInternal, hostExternal };
+
+                            // update combo box
+                            throw new NotImplementedException();
+                            // m_mainForm.comboBox1.Items.Clear();
+                            // foreach (var kvp in m_hostList)
+                            // 	m_mainForm.comboBox1.Items.Add(kvp.Key.ToString() + " (" + kvp.Value[1] + ")");
+                        }
+                        break;
+                    case NetIncomingMessageType.NatIntroductionSuccess:
+                        string token = inc.ReadString();
+                        throw new NotImplementedException();
+                        //MessageBox.Show("Nat introduction success to " + inc.SenderEndPoint + " token is: " + token);
+                        //break;
+                }
+            }
+		}
     }
 }
