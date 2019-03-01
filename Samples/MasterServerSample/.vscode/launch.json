@@ -14,28 +14,25 @@
             "args":
             [
             ]
-        } //,
-        // {
-        //     "name": "BVD OpenGL (2)",
-        //     "type": "mono",
-        //     "request": "launch",
-        //     "program": "${workspaceRoot}/BirdVsDrone/TertTech.Games.BirdVsDrone.OpenGL.Host/bin/DesktopGL/AnyCPU/Debug/TertTech.Games.BirdVsDrone.OpenGL.Host.exe",
-        //     "cwd": "${workspaceRoot}/BirdVsDrone/TertTech.Games.BirdVsDrone.OpenGL.Host/bin/DesktopGL/AnyCPU/Debug",
-        //     "preLaunchTask": "BVD DesktopGL",
-        //     "args":
-        //     [
-        //         "-s=0.45",
-        //         "-x=right",
-        //         "-y=bottom"
-        //     ]
-        // }
+        } ,
+        {
+            "name": "MasterServer",
+            "type": "mono",
+            "request": "launch",
+            "program": "${workspaceRoot}/MasterServer/bin/Debug/MasterServer.exe",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "Build All",
+            "args":
+            [
+            ]
+        }
     ]
-    // ,
-    // "compounds": [
-    //     {
-    //         "name": "BVD OpenGL 2P",
-    //         "preLaunchTask" : "buid",
-    //         "configurations": ["BVD OpenGL","BVD OpenGL (2)"]
-    //     }
-    // ]
+    ,
+    "compounds": [
+        {
+            "name": "Debug All",
+            "preLaunchTask" : "Build All",
+            "configurations": ["MasterServer","MSClient .NET Core"]
+        }
+    ]
 }
