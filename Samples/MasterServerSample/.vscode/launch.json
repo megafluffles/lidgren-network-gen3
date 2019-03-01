@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MSClient .NET Core",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceRoot}/MSClient.Avalonia/bin/Debug/netcoreapp2.0/MSClient.Avalonia.dll",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "Build All",
+            "args":
+            [
+            ]
+        } //,
+        // {
+        //     "name": "BVD OpenGL (2)",
+        //     "type": "mono",
+        //     "request": "launch",
+        //     "program": "${workspaceRoot}/BirdVsDrone/TertTech.Games.BirdVsDrone.OpenGL.Host/bin/DesktopGL/AnyCPU/Debug/TertTech.Games.BirdVsDrone.OpenGL.Host.exe",
+        //     "cwd": "${workspaceRoot}/BirdVsDrone/TertTech.Games.BirdVsDrone.OpenGL.Host/bin/DesktopGL/AnyCPU/Debug",
+        //     "preLaunchTask": "BVD DesktopGL",
+        //     "args":
+        //     [
+        //         "-s=0.45",
+        //         "-x=right",
+        //         "-y=bottom"
+        //     ]
+        // }
+    ]
+    // ,
+    // "compounds": [
+    //     {
+    //         "name": "BVD OpenGL 2P",
+    //         "preLaunchTask" : "buid",
+    //         "configurations": ["BVD OpenGL","BVD OpenGL (2)"]
+    //     }
+    // ]
+}
