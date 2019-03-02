@@ -20,7 +20,7 @@
 
     </DockPanel>
 
-    <TextBlock Margin="4" />
+    <TextBlock Margin="4" Text="{Binding Output}" />
 
   </DockPanel>
   

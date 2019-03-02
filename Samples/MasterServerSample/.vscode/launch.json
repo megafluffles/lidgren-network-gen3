@@ -22,6 +22,7 @@
             "program": "${workspaceRoot}/MasterServer/bin/Debug/MasterServer.exe",
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Build All",
+            "console":"externalTerminal",
             "args":
             [
             ]
@@ -30,6 +31,7 @@
             "name": "MSServer",
             "type": "mono",
             "request": "launch",
+            "console": "externalTerminal",
             "program": "${workspaceRoot}/MSServer/bin/Debug/MSServer.exe",
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Build All",
