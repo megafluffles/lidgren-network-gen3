@@ -15,6 +15,10 @@ namespace MSClient.Avalonia.ViewModels
 
         public string MasterServerAddress { get; set; }
 
+        public List<string> Hosts { get; set; }
+
+        public int SelectedHostIndex { get; set; }
+
         private static NetClient m_client;
         private static IPEndPoint m_masterServer;
         private static Dictionary<long, IPEndPoint[]> m_hostList;
@@ -22,6 +26,9 @@ namespace MSClient.Avalonia.ViewModels
         public MainWindowViewModel()
         {
             MasterServerAddress = "localhost";
+            Hosts = new List<string>();
+            Hosts.Add(" ");
+            SelectedHostIndex = 0;
             GetHostListCommand = ReactiveUI.ReactiveCommand.Create(GetHostList);
 
             m_hostList = new Dictionary<long, IPEndPoint[]>();
@@ -64,10 +71,14 @@ namespace MSClient.Avalonia.ViewModels
                                 m_hostList[id] = new IPEndPoint[] { hostInternal, hostExternal };
 
                                 // update combo box
-                                throw new NotImplementedException();
                                 // m_mainForm.comboBox1.Items.Clear();
                                 // foreach (var kvp in m_hostList)
                                 // 	m_mainForm.comboBox1.Items.Add(kvp.Key.ToString() + " (" + kvp.Value[1] + ")");
+                                Hosts.Clear();
+                                foreach (var kvp in m_hostList)
+                                {
+                                    Hosts.Add(new Tuple<)
+                                }
                             }
                             break;
                         case NetIncomingMessageType.NatIntroductionSuccess:

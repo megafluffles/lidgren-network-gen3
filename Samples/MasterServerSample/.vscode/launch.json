@@ -17,7 +17,11 @@
         },
         {
             "name": "MasterServer",
-            "type": "mono",
+            "type": "clr",
+            "linux":
+            {
+                "type": "mono",
+            },
             "request": "launch",
             "program": "${workspaceRoot}/MasterServer/bin/Debug/MasterServer.exe",
             "cwd": "${workspaceRoot}",
@@ -29,7 +33,11 @@
         },
         {
             "name": "MSServer",
-            "type": "mono",
+            "type": "clr",
+            "linux":
+            {
+                "type": "mono",
+            },
             "request": "launch",
             "console": "externalTerminal",
             "program": "${workspaceRoot}/MSServer/bin/Debug/MSServer.exe",

@@ -17,8 +17,8 @@
       <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4">Master server address</TextBlock>
       <Button DockPanel.Dock="Right" Margin="4" Command="{Binding GetHostListCommand}">Get host list</Button>
       <TextBox Margin="4" Name="masterServerTextBox" Text="{Binding MasterServerAddress}" />
-
     </DockPanel>
+    <DropDown DockPanel.Dock="Top" Margin="4" Items="{Binding Hosts}" SelectedIndex="{Binding SelectedHostIndex}" />
 
     <TextBlock Margin="4" Text="{Binding Output}" />
 
