@@ -3,6 +3,7 @@ using Lidgren.Network;
 using MSCommon;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 using System.Windows.Input;
@@ -13,9 +14,13 @@ namespace MSClient.Avalonia.ViewModels
     {
         public ICommand GetHostListCommand { get; set; }
 
+        public ICommand RequestPunchThruCommand { get; set; }
+
         public string MasterServerAddress { get; set; }
 
         public List<string> Hosts { get; set; }
+
+        public string Output { get; set; }
 
         public int SelectedHostIndex { get; set; }
 
@@ -29,7 +34,9 @@ namespace MSClient.Avalonia.ViewModels
             Hosts = new List<string>();
             Hosts.Add(" ");
             SelectedHostIndex = 0;
+
             GetHostListCommand = ReactiveUI.ReactiveCommand.Create(GetHostList);
+            RequestPunchThruCommand = ReactiveUI.ReactiveCommand.Create(RequestPunchThru);
 
             m_hostList = new Dictionary<long, IPEndPoint[]>();
 
@@ -70,22 +77,17 @@ namespace MSClient.Avalonia.ViewModels
 
                                 m_hostList[id] = new IPEndPoint[] { hostInternal, hostExternal };
 
-                                // update combo box
-                                // m_mainForm.comboBox1.Items.Clear();
-                                // foreach (var kvp in m_hostList)
-                                // 	m_mainForm.comboBox1.Items.Add(kvp.Key.ToString() + " (" + kvp.Value[1] + ")");
                                 Hosts.Clear();
                                 foreach (var kvp in m_hostList)
                                 {
-                                    Hosts.Add(new Tuple<)
+                                    Hosts.Add(kvp.Key.ToString() + " (" + kvp.Value[1] + ")");
                                 }
                             }
                             break;
                         case NetIncomingMessageType.NatIntroductionSuccess:
                             string token = inc.ReadString();
-                            throw new NotImplementedException();
-                            //MessageBox.Show("Nat introduction success to " + inc.SenderEndPoint + " token is: " + token);
-                            //break;
+                            Output += $"Nat introduction success to {inc.SenderEndPoint} token is: {token}";
+                            break;
                     }
                 }
 
@@ -96,6 +98,17 @@ namespace MSClient.Avalonia.ViewModels
         private void GetHostList()
         {
             GetServerList(MasterServerAddress);
+        }
+
+        private void RequestPunchThru()
+        {
+            Debugger.Break();
+
+            var c = Hosts.Count;
+            var i = SelectedHostIndex;
+            var b = Hosts[i];
+
+            int x = 0;
         }
 
         private static void GetServerList(string masterServerAddress)

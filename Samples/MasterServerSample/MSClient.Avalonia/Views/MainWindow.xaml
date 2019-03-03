@@ -18,9 +18,17 @@
       <Button DockPanel.Dock="Right" Margin="4" Command="{Binding GetHostListCommand}">Get host list</Button>
       <TextBox Margin="4" Name="masterServerTextBox" Text="{Binding MasterServerAddress}" />
     </DockPanel>
-    <DropDown DockPanel.Dock="Top" Margin="4" Items="{Binding Hosts}" SelectedIndex="{Binding SelectedHostIndex}" />
+    <ListBox DockPanel.Dock="Top" Height="120" Margin="4" Items="{Binding Hosts, Mode=TwoWay}" SelectedIndex="{Binding SelectedHostIndex, Mode=TwoWay}">
+      <!--<ListBox.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Margin="4" Text="{Binding}" />
+        </DataTemplate>
+      </ListBox.ItemTemplate>-->
+    </ListBox>
 
-    <TextBlock Margin="4" Text="{Binding Output}" />
+    <Button DockPanel.Dock="Right" Command="{Binding RequestPunchThruCommand}">Request NAT punch thru from MS to this host</Button>
+    
+    <TextBox Margin="4" Text="{Binding Output}" DockPanel.Dock="Bottom" />
 
   </DockPanel>
   
