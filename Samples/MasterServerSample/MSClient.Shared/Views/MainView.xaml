@@ -1,0 +1,26 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:vm="clr-namespace:MSClient.ViewModels;assembly=MSClient.NetCore"
+        xmlns:local="clr-namespace:MSClient.Views"
+        xmlns:localControls="clr-namespace:MSClient.Controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <DockPanel>
+    <localControls:Viewbox Stretch="Uniform">
+      <DockPanel Width="500">
+
+        <DockPanel DockPanel.Dock="Top" Margin="4">
+
+          <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4">Master server address</TextBlock>
+          <Button DockPanel.Dock="Right" Margin="4" Command="{Binding GetHostListCommand}">Get host list</Button>
+          <TextBox Margin="4" Name="masterServerTextBox" Text="{Binding MasterServerAddress}" />
+        </DockPanel>
+        <ListBox DockPanel.Dock="Top" Height="60" Margin="4" Items="{Binding Hosts, Mode=TwoWay}" SelectedIndex="{Binding SelectedHostIndex, Mode=TwoWay}" />
+
+        <Button DockPanel.Dock="Top" HorizontalAlignment="Right" Margin="4" Width="360" Command="{Binding RequestPunchThruCommand}">Request NAT punch thru from MS to this host</Button>
+
+        <TextBox Margin="4" Text="{Binding Output}" DockPanel.Dock="Bottom" TextWrapping="Wrap" MinHeight="240" />
+
+      </DockPanel>
+    </localControls:Viewbox>
+  </DockPanel>
+</UserControl>

@@ -8,7 +8,7 @@
             "name": "MSClient .NET Core",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceRoot}/MSClient.Avalonia/bin/Debug/netcoreapp2.0/MSClient.Avalonia.dll",
+            "program": "${workspaceRoot}/MSClient.NetCore/bin/Debug/netcoreapp2.0/MSClient.NetCore.dll",
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Build All",
             "args":

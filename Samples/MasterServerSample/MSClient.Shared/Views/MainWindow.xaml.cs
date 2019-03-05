@@ -1,8 +1,9 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using MSClient.ViewModels;
 
-namespace MSClient.Avalonia.Views
+namespace MSClient.Views
 {
     public class MainWindow : Window
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Logging.Serilog;
-using MSClient.Avalonia.ViewModels;
-using MSClient.Avalonia.Views;
+using MSClient.ViewModels;
+using MSClient.Views;
 
-namespace MSClient.Avalonia
+namespace MSClient
 {
     class Program
     {

@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Markup.Xaml;
 
-namespace MSClient.Avalonia
+namespace MSClient
 {
     public class App : Application
     {

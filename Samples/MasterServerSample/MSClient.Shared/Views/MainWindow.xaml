@@ -1,0 +1,10 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MSClient.ViewModels;assembly=MSClient.NetCore"
+        xmlns:local="clr-namespace:MSClient.Views"
+        Icon="resm:MSClient.Assets.avalonia-logo.ico"
+        Title="MSClient" Width="800" Height="600">
+
+  <local:MainView Name="MainView" DataContext="{Binding MainViewViewModel}" />
+
+</Window>
