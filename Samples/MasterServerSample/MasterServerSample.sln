@@ -21,6 +21,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MSClient.Shared", "MSClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSClient.Android", "MSClient.Android\MSClient.Android.csproj", "{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterServer.NetCore", "MasterServer.NetCore\MasterServer.NetCore.csproj", "{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MSClient.Shared\MSClient.Shared.projitems*{3bc0ac7e-3b3b-4d3f-9cc0-b2bdecc460a6}*SharedItemsImports = 4
@@ -59,6 +61,16 @@ Global
 		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
