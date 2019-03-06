@@ -43,7 +43,7 @@ namespace MSClient.ViewModels
 
         public MainViewViewModel()
         {
-            MasterServerAddress = "localhost";
+            MasterServerAddress = "192.168.1.243";
             Hosts = new ReactiveList<string>();
             Hosts.Add(" ");
             SelectedHostIndex = 0;
