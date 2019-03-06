@@ -26,10 +26,6 @@ namespace MSClient
 		
 		public static void UpdateIdValues()
 		{
-			global::Avalonia.Android.Resource.String.ApplicationName = global::MSClient.Resource.String.ApplicationName;
-			global::Avalonia.Android.Resource.String.Hello = global::MSClient.Resource.String.Hello;
-			global::Avalonia.Android.Resource.String.library_name = global::MSClient.Resource.String.library_name;
-			global::Splat.Resource.String.library_name = global::MSClient.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -3158,12 +3154,6 @@ namespace MSClient
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090029
-			public const int ApplicationName = 2131296297;
-			
-			// aapt resource value: 0x7f090028
-			public const int Hello = 2131296296;
-			
 			// aapt resource value: 0x7f090000
 			public const int abc_action_bar_home_description = 2131296256;
 			
@@ -3251,11 +3241,11 @@ namespace MSClient
 			// aapt resource value: 0x7f090010
 			public const int abc_toolbar_collapse_description = 2131296272;
 			
-			// aapt resource value: 0x7f09002b
-			public const int action_settings = 2131296299;
+			// aapt resource value: 0x7f090028
+			public const int action_settings = 2131296296;
 			
-			// aapt resource value: 0x7f09002a
-			public const int app_name = 2131296298;
+			// aapt resource value: 0x7f090027
+			public const int app_name = 2131296295;
 			
 			// aapt resource value: 0x7f09001e
 			public const int appbar_scrolling_view_behavior = 2131296286;
@@ -3265,9 +3255,6 @@ namespace MSClient
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
-			
-			// aapt resource value: 0x7f090027
-			public const int library_name = 2131296295;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;

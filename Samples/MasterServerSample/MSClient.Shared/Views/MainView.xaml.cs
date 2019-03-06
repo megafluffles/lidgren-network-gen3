@@ -30,7 +30,7 @@ namespace MSClient.Views
 
         private void InitializeComponent()
         {
-            AvaloniaXamlLoaderPortableXaml.Load(this);
+            AvaloniaXamlLoader.Load(this);
         }
     }
 }

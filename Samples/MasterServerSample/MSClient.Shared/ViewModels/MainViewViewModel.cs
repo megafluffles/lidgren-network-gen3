@@ -3,6 +3,7 @@ using Avalonia.Threading;
 using Lidgren.Network;
 using MSCommon;
 using ReactiveUI;
+using ReactiveUI.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
