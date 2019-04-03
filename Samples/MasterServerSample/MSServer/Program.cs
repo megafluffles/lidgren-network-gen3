@@ -11,7 +11,7 @@ namespace MSServer
 	{
 		static void Main(string[] args)
 		{
-			IPEndPoint masterServerEndpoint = NetUtility.Resolve("localhost", CommonConstants.MasterServerPort);
+			IPEndPoint masterServerEndpoint = NetUtility.Resolve("192.168.1.243", CommonConstants.MasterServerPort);
 
 			NetPeerConfiguration config = new NetPeerConfiguration("game");
 			config.SetMessageTypeEnabled(NetIncomingMessageType.NatIntroductionSuccess, true);

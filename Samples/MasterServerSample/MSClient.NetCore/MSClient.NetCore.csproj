@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
+    <RootNamespace>MSClient</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.7.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.7.0" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Lidgren.Network.MultiTarget\Lidgren.Network.MultiTarget.csproj" />
+    <ProjectReference Include="..\MSCommon.NetStandard\MSCommon.NetStandard.csproj" />
+  </ItemGroup>
+  <Import Project="..\MSClient.Shared\MSClient.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <EmbeddedResource Update="C:\src\megafluffles\lidgren-network-gen3\Samples\MasterServerSample\MSClient.Shared\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="C:\src\megafluffles\lidgren-network-gen3\Samples\MasterServerSample\MSClient.Shared\Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

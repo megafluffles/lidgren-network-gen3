@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterServer", "MasterServer\MasterServer.csproj", "{47E2AC9A-F375-47A7-A4E6-9814D3A2954B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSClient", "MSClient\MSClient.csproj", "{E4FBEFAB-0D5F-4108-BAA9-E796E14AD6B2}"
@@ -9,9 +11,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSCommon", "MSCommon\MSComm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSServer", "MSServer\MSServer.csproj", "{BBE12F3E-098F-4C13-842F-A52B86E2611A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network", "..\..\Lidgren.Network\Lidgren.Network.csproj", "{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lidgren.Network.MultiTarget", "..\..\Lidgren.Network.MultiTarget\Lidgren.Network.MultiTarget.csproj", "{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSClient.NetCore", "MSClient.NetCore\MSClient.NetCore.csproj", "{E76EE988-E164-4349-8E7C-A87A04F65016}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSCommon.NetStandard", "MSCommon.NetStandard\MSCommon.NetStandard.csproj", "{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MSClient.Shared", "MSClient.Shared\MSClient.Shared.shproj", "{F93346C6-FCF5-4AE1-978D-3676BA967139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSClient.Android", "MSClient.Android\MSClient.Android.csproj", "{3BC0AC7E-3B3B-4D3F-9CC0-B2BDECC460A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterServer.NetCore", "MasterServer.NetCore\MasterServer.NetCore.csproj", "{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MSClient.Shared\MSClient.Shared.projitems*{3bc0ac7e-3b3b-4d3f-9cc0-b2bdecc460a6}*SharedItemsImports = 4
+		MSClient.Shared\MSClient.Shared.projitems*{f93346c6-fcf5-4ae1-978d-3676ba967139}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -33,12 +49,27 @@ Global
 		{BBE12F3E-098F-4C13-842F-A52B86E2611A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBE12F3E-098F-4C13-842F-A52B86E2611A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBE12F3E-098F-4C13-842F-A52B86E2611A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E76EE988-E164-4349-8E7C-A87A04F65016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76EE988-E164-4349-8E7C-A87A04F65016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76EE988-E164-4349-8E7C-A87A04F65016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E76EE988-E164-4349-8E7C-A87A04F65016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB10C0E-2AB7-4814-B8A3-2B37E579515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5B6C94-9325-4ECD-AF07-20046BCF98CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D66C2B0-C81E-47C3-8E23-E7C27957183E}
 	EndGlobalSection
 EndGlobal

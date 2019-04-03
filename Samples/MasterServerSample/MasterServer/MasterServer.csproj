@@ -76,9 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Lidgren.Network\Lidgren.Network.csproj">
-      <Project>{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}</Project>
-      <Name>Lidgren.Network</Name>
+    <ProjectReference Include="..\..\..\Lidgren.Network.MultiTarget\Lidgren.Network.MultiTarget.csproj">
+      <Project>{F8D4DFB7-ADEF-4919-A91F-AB6DF1D74C18}</Project>
+      <Name>Lidgren.Network.MultiTarget</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSCommon\MSCommon.csproj">
       <Project>{DCD2BE10-1B14-4C80-8BD6-77A8B1F43346}</Project>
